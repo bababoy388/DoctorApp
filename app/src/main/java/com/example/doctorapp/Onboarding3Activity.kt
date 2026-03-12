@@ -13,8 +13,14 @@ class Onboarding3Activity : AppCompatActivity() {
         enableEdgeToEdge()
 
         val btnNext = findViewById<TextView>(R.id.button)
+        val btnSkip = findViewById<TextView>(R.id.skipBtn)
 
         btnNext.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnSkip.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
