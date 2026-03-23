@@ -3,6 +3,7 @@
     <style name="Base.Theme.DoctorApp" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:fontFamily">@font/rubik_variable_font_wght</item>
         <item name="fontFamily">@font/rubik_variable_font_wght</item>
+
     </style>
 
     <style name="Theme.DoctorApp" parent="Base.Theme.DoctorApp" />
