@@ -4,4 +4,26 @@
         <item name="android:fontFamily">@font/rubik_variable_font_wght</item>
         <item name="fontFamily">@font/rubik_variable_font_wght</item>
     </style>
+
+    <style name="Theme.DatePickerActivity" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Задаём зелёный акцентный цвет -->
+        <item name="colorAccent">@color/green</item>
+        <!-- Для более новых версий MaterialComponents может понадобиться: -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorSecondary">@color/green</item>
+    </style>
+
+    <style name="GreenOutlinedChip" parent="Widget.Material3.Chip.Filter">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="chipStrokeColor">@color/green</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipBackgroundColor">@android:color/transparent</item>
+        <!-- Цвет выбранного чипа (фон) -->
+        <item name="chipSurfaceColor">@color/green</item>
+        <item name="android:colorControlHighlight">@color/green</item>
+    </style>
+
+    <style name="Theme.MyApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/green</item>
+    </style>
 </resources>

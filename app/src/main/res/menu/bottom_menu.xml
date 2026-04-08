@@ -10,7 +10,7 @@
     <item
         android:id="@+id/history"
         android:icon="@drawable/home"
-        android:title="История" />
+        android:title="Записи" />
 
     <item
         android:id="@+id/paying"
