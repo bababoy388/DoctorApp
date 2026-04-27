@@ -23,7 +23,6 @@ class RegisterActivity : AppCompatActivity() {
 
         sharedPref = getSharedPreferences("user_data", Context.MODE_PRIVATE)
 
-        // Поле логина (editText1) не используется
         editTextEmail = findViewById(R.id.editText2)
         editTextPassword = findViewById(R.id.editText3)
 
@@ -32,6 +31,7 @@ class RegisterActivity : AppCompatActivity() {
 
         login.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
+            overridePendingTransition(0, 0) // отключаем анимацию
         }
 
         btnReg.setOnClickListener {
@@ -66,8 +66,8 @@ class RegisterActivity : AppCompatActivity() {
         val savedPassword = sharedPref.getString("password", null)
 
         if (email == savedEmail && password == savedPassword) {
-            // Данные верны – переходим на главный экран
             startActivity(Intent(this, MainActivity::class.java))
+            overridePendingTransition(0, 0) // отключаем анимацию
         } else {
             Toast.makeText(this, "Неверный email или пароль", Toast.LENGTH_SHORT).show()
         }

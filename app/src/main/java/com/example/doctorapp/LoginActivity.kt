@@ -33,12 +33,14 @@ class LoginActivity : AppCompatActivity() {
 
         register.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
+            overridePendingTransition(0, 0) // отключаем анимацию
         }
 
         btnLog.setOnClickListener {
             if (validateFields()) {
                 saveData()
                 startActivity(Intent(this, Onboarding1Activity::class.java))
+                overridePendingTransition(0, 0) // отключаем анимацию
             }
         }
     }

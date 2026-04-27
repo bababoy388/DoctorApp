@@ -1,6 +1,8 @@
 package com.example.doctorapp
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -14,10 +16,18 @@ class SplashActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_splash)
 
-        // Задержка в 2 секунды, затем переход на MainActivity
+        val sharedPref = getSharedPreferences("user_data", Context.MODE_PRIVATE)
+        val isRegistered = sharedPref.getString("email", null) != null
+
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish() // закрываем SplashActivity, чтобы пользователь не вернулся к ней назад
-        }, 2000) // время в миллисекундах
+            val intent = if (isRegistered) {
+                Intent(this, MainActivity::class.java)
+            } else {
+                Intent(this, LoginActivity::class.java)
+            }
+            startActivity(intent)
+            overridePendingTransition(0, 0) // отключаем анимацию
+            finish()
+        }, 2000) // задержка 2 секунды
     }
 }

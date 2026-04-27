@@ -18,12 +18,13 @@ class Onboarding1Activity : AppCompatActivity() {
         btnNext.setOnClickListener {
             val intent = Intent(this, Onboarding2Activity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, 0) // отключаем анимацию
         }
 
         btnSkip.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, 0) // отключаем анимацию
         }
-
     }
 }

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgtound_1"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:id="@+id/main">
+
+    <!-- Иконка успеха (можно заменить на свою) -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@android:drawable/checkbox_on_background"
+        android:contentDescription="Успех" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Запись успешна!"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ваша запись подтверждена.\nОжидайте приёма."
+        android:textSize="16sp"
+        android:textColor="@color/invite_color"
+        android:gravity="center"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btnGoHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="На главный экран"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green"
+        android:layout_marginTop="48dp"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="12dp"
+        android:textSize="18sp" />
+
+</LinearLayout>

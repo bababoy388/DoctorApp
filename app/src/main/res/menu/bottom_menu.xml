@@ -3,23 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/my_ticket"
-        android:icon="@drawable/home"
-        android:title="Главная" />
+        android:id="@+id/signup"
+        android:icon="@drawable/singup"
+        android:title="Записаться" />
 
     <item
-        android:id="@+id/history"
-        android:icon="@drawable/home"
-        android:title="Записи" />
+        android:id="@+id/appointment"
+        android:icon="@drawable/appointments"
+        android:title="Мои записи" />
 
     <item
-        android:id="@+id/paying"
-        android:icon="@drawable/home"
-        android:title="Оплата" />
-
-    <item
-        android:id="@+id/menu"
-        android:icon="@drawable/home"
-        android:title="Меню" />
+        android:id="@+id/profile"
+        android:icon="@drawable/profile"
+        android:title="Профиль" />
 
 </menu>
