@@ -37,6 +37,7 @@ class AppointmentsActivity : AppCompatActivity() {
         rvAppointments.adapter = AppointmentAdapter(appointments)
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNav.selectedItemId = R.id.appointment
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.appointment -> {

@@ -78,6 +78,7 @@ class MainActivity : AppCompatActivity() {
 
         // Нижняя навигация
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNav.selectedItemId = R.id.signup
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.appointment -> {

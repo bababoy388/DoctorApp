@@ -65,6 +65,7 @@ class ProfileActivity : AppCompatActivity() {
 
         // Нижняя навигация
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNav.selectedItemId = R.id.profile
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.appointment -> {
